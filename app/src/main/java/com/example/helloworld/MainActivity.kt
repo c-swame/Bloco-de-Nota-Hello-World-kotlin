@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager
 
-        adapter = CardLayoutAdapter(getTasksFromSharedPreferences())
+        adapter = CardLayoutAdapter(getTasksFromSharedPreferences(), sharedPreferences)
         binding.recyclerView.adapter = adapter
 
         binding.btnCreateTask.setOnClickListener {
